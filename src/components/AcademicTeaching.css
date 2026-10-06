@@ -1,0 +1,244 @@
+/* Academic Areas Stack */
+.academic-areas-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  margin-bottom: 52px;
+}
+
+.academic-area-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.2s ease;
+}
+
+.academic-area-card:hover {
+  border-color: rgba(96, 165, 250, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .academic-area-card {
+    padding: 22px;
+  }
+}
+
+.academic-area-header {
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.area-badges-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.academic-area-institution {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.academic-area-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.academic-area-subject {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #60a5fa;
+}
+
+.academic-area-level {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.academic-area-summary {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.academic-area-body {
+  padding-top: 4px;
+}
+
+.area-curriculum-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin-bottom: 14px;
+}
+
+.area-curriculum-icon {
+  color: #60a5fa;
+}
+
+.area-topics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 768px) {
+  .area-topics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.area-topic-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.875rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+}
+
+.topic-check-bullet {
+  color: #60a5fa;
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Redesigned Philosophy Card: Typography driven, no giant numbers */
+.teaching-philosophy-card {
+  background: linear-gradient(135deg, #0e172a 0%, #0a0f1d 100%);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+  .teaching-philosophy-card {
+    padding: 24px 18px;
+  }
+}
+
+.philosophy-header-block {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 30px auto;
+}
+
+.philosophy-eyebrow {
+  display: inline-block;
+  font-size: 0.775rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #60a5fa;
+  margin-bottom: 8px;
+}
+
+.philosophy-headline {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin-bottom: 8px;
+}
+
+.philosophy-subtitle {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.philosophy-principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 860px) {
+  .philosophy-principles-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.philosophy-principle-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-top {
+  margin-bottom: 10px;
+}
+
+.principle-tag {
+  display: inline-block;
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #93c5fd;
+  margin-bottom: 4px;
+}
+
+.principle-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.principle-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+}
+
+.philosophy-footer-note {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.philosophy-flow-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flow-arrow {
+  color: #60a5fa;
+  font-weight: 800;
+}

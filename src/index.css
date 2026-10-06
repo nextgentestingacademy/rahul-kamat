@@ -1,0 +1,320 @@
+:root {
+  /* ========================================================
+     PREMIUM DARK ACADEMIC & TECHNOLOGY THEME
+     Deep Navy / Charcoal / Slate / Muted Blue / Warm White
+     ======================================================== */
+  --bg-primary: #0a0f1d;          /* Deep rich academic navy base */
+  --bg-secondary: #0f172a;        /* Elegant dark slate container */
+  --bg-subtle: #131d36;           /* Intermediate slate blue */
+  --bg-surface: #17233f;          /* Elevated card and panel surface */
+  --bg-surface-elevated: #1e2d52; /* Hover and high-elevation surface */
+  --bg-dark: #060913;             /* Deepest midnight navy */
+  --bg-navy: #0e1628;             /* Classic institutional navy */
+  
+  /* Text System (High contrast, readable, accessible) */
+  --text-main: #f8fafc;           /* Crisp off-white */
+  --text-body: #cbd5e1;           /* Light cool slate */
+  --text-muted: #94a3b8;          /* Muted silvery slate */
+  --text-light: #64748b;          /* Secondary meta text */
+  --text-white: #ffffff;
+  
+  /* Academic Sapphire & Tech Accent */
+  --primary: #3b82f6;             /* Vibrant clear sapphire blue */
+  --primary-hover: #60a5fa;
+  --primary-light: rgba(59, 130, 246, 0.15);
+  --primary-border: rgba(96, 165, 250, 0.35);
+  
+  /* Restrained Engineering Cyan / Steel Accent */
+  --accent: #38bdf8;             /* Sky cyan for technical callouts */
+  --accent-hover: #7dd3fc;
+  --accent-light: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.3);
+  
+  /* Restrained Academic Gold (IIM Calcutta / Honors) */
+  --gold-bg: rgba(245, 158, 11, 0.12);
+  --gold-border: rgba(251, 191, 36, 0.4);
+  --gold-text: #fbbf24;
+  
+  /* Borders & Shadows for Dark Theme */
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-medium: rgba(255, 255, 255, 0.15);
+  --border-strong: rgba(255, 255, 255, 0.25);
+  
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 24px -4px rgba(0, 0, 0, 0.55);
+  --shadow-xl: 0 20px 32px -6px rgba(0, 0, 0, 0.65);
+  --shadow-glow: 0 0 25px rgba(59, 130, 246, 0.18);
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, Cambria, 'Times New Roman', Times, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+  
+  --container-max: 1240px;
+}
+
+/* Base reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg-primary);
+  color-scheme: dark;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Accessibility Focus States */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+/* Utility Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.section {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  scroll-margin-top: 76px;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    scroll-margin-top: 70px;
+  }
+}
+
+.section-alt {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+/* Typography Helpers */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #93c5fd;
+  background-color: rgba(59, 130, 246, 0.16);
+  border: 1px solid rgba(147, 197, 253, 0.35);
+  padding: 4px 14px;
+  border-radius: var(--radius-full);
+  margin-bottom: 16px;
+}
+
+.eyebrow-dark {
+  color: #93c5fd;
+  background-color: rgba(30, 58, 138, 0.4);
+  border-color: rgba(147, 197, 253, 0.4);
+}
+
+.eyebrow-gold {
+  color: var(--gold-text);
+  background-color: var(--gold-bg);
+  border-color: var(--gold-border);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.875rem;
+  }
+}
+
+.section-desc {
+  font-size: 1.0625rem;
+  color: var(--text-muted);
+  max-width: 740px;
+  line-height: 1.65;
+}
+
+.section-header-center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 52px;
+}
+
+@media (max-width: 768px) {
+  .section-header-center {
+    margin-bottom: 36px;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 22px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.06);
+  color: var(--text-main);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
+.btn-outline-white {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-outline-white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.btn-accent {
+  background-color: #0284c7;
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.35);
+}
+
+.btn-accent:hover {
+  background-color: #0369a1;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.5);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-navy {
+  background-color: rgba(59, 130, 246, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.badge-accent {
+  background-color: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-gold {
+  background-color: var(--gold-bg);
+  color: var(--gold-text);
+  border: 1px solid var(--gold-border);
+}

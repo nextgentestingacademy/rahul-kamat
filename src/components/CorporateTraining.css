@@ -1,0 +1,247 @@
+.corp-pedigree-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 34px 38px;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 36px;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 44px;
+}
+
+@media (max-width: 900px) {
+  .corp-pedigree-card {
+    grid-template-columns: 1fr;
+    padding: 22px;
+    gap: 22px;
+  }
+}
+
+.pedigree-label {
+  display: block;
+  font-size: 0.725rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 8px;
+}
+
+.pedigree-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.pedigree-desc {
+  font-size: 0.9rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.pedigree-orgs-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.corp-org-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.pedigree-impact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 22px;
+}
+
+.pedigree-impact-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #38bdf8;
+}
+
+.pedigree-impact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.impact-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.825rem;
+  color: #e2e8f0;
+  line-height: 1.45;
+}
+
+.impact-icon {
+  color: #38bdf8;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+/* Modules Grid */
+.corp-modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 44px;
+}
+
+@media (max-width: 960px) {
+  .corp-modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .corp-modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.corp-module-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.corp-module-card:hover {
+  border-color: var(--accent-border);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  background-color: var(--bg-surface-elevated);
+}
+
+.module-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.module-num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.module-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.35;
+}
+
+.module-desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.module-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-light);
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.775rem;
+  color: #94a3b8;
+}
+
+.benefit-check {
+  color: #38bdf8;
+  flex-shrink: 0;
+}
+
+/* Corporate CTA Banner */
+.corp-cta-banner {
+  background: linear-gradient(135deg, #070b16 0%, #111d38 100%);
+  border-radius: var(--radius-lg);
+  padding: 34px 38px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 860px) {
+  .corp-cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 26px 22px;
+    gap: 18px;
+  }
+}
+
+.corp-cta-headline {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.corp-cta-sub {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  max-width: 680px;
+  line-height: 1.55;
+}
+
+.corp-cta-button-wrap {
+  flex-shrink: 0;
+}
+
+.btn-corp-cta {
+  background-color: #0284c7;
+  color: white;
+}
+
+.btn-corp-cta:hover {
+  background-color: #0369a1;
+}

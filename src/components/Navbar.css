@@ -1,0 +1,233 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: rgba(10, 15, 29, 0.95);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-light);
+  transition: all 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6);
+  background-color: rgba(10, 15, 29, 0.98);
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  gap: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, #2563eb, #38bdf8);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.4);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+.brand-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+.brand-tagline {
+  font-size: 0.725rem;
+  color: #94a3b8;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  margin-top: 1px;
+}
+
+/* Desktop Navigation - Strictly Single Horizontal Row */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.nav-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  transition: all 0.18s ease;
+  position: relative;
+  padding: 8px 4px;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4px;
+  right: 4px;
+  height: 2px;
+  background-color: #3b82f6;
+  border-radius: 2px;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.6);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.btn-sm {
+  padding: 7px 14px;
+  font-size: 0.8125rem;
+  height: 36px;
+}
+
+.mobile-toggle {
+  display: none;
+  color: #f8fafc;
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Controlled Desktop & Intermediate Breakpoints:
+   Switch to mobile drawer before any item can wrap */
+@media (max-width: 1140px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Mobile Drawer Overlay */
+.mobile-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(6, 9, 19, 0.8);
+  backdrop-filter: blur(6px);
+  z-index: 200;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mobile-menu {
+  width: 320px;
+  max-width: 85vw;
+  height: 100%;
+  background-color: #0f172a;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: -6px 0 28px rgba(0, 0, 0, 0.6);
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
+
+.mobile-brand {
+  font-weight: 700;
+  color: #f8fafc;
+  font-size: 1rem;
+}
+
+.mobile-close {
+  color: #94a3b8;
+  padding: 4px;
+}
+
+.mobile-close:hover {
+  color: #ffffff;
+}
+
+.mobile-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mobile-nav-link {
+  display: block;
+  padding: 9px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  border-radius: var(--radius-sm);
+  transition: all 0.15s ease;
+}
+
+.mobile-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #60a5fa;
+}
+
+.mobile-menu-footer {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
