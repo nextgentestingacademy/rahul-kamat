@@ -45,3 +45,5 @@ section-*.png
 fullpage-*.png
 *.tmp
 extracted_profile.txt
+.vercel
+.env*
